@@ -9,15 +9,21 @@ import UIKit
 
 class TaskTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var lastNameLabel: UILabel!
+    
+    static let identifier = "TaskTableViewCell"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
+    func setup(user: LocalUser) {
+        nameLabel.text = user.name
+        lastNameLabel.text = user.lastName
+        profileImage.image = user.image
+    }
+
 }

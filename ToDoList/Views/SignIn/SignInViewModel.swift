@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+protocol SignInView {
+    
+}
+
+protocol SignInViewModel {
+    
+}
+
+class SignInViewModelImplemenation: SignInViewModel {
+    
+}
