@@ -17,7 +17,7 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = WelcomeViewModelImplemenation(router: WelcomeRouterImplementation(controller: self))
-        signUpButton.backgroundColor = .lightGray
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     @IBAction func presentSignUp(_ sender: UIButton) {

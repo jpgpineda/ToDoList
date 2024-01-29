@@ -11,6 +11,7 @@ protocol OnboardingDependency {
     var container: Container { get }
     func makeSignInViewController(name: String?) -> SignInViewController?
     func makeSignUPViewController() -> SignUpViewController?
+    func makeLoaderViewController() -> LoaderViewController?
 }
 
 class OnboardingDependencyImplementation: OnboardingDependency {
@@ -20,6 +21,7 @@ class OnboardingDependencyImplementation: OnboardingDependency {
         self.container = container
         registerSignInViewController()
         registerSignUpViewController()
+        registerLoaderViewController()
     }
     
     private func registerSignInViewController() {
@@ -30,7 +32,6 @@ class OnboardingDependencyImplementation: OnboardingDependency {
     
     func makeSignInViewController(name: String?) -> SignInViewController? {
         guard let viewController = container.resolve(SignInViewController.self) else { return nil }
-        viewController.name = name
         return viewController
     }
     
@@ -42,5 +43,15 @@ class OnboardingDependencyImplementation: OnboardingDependency {
     
     func makeSignUPViewController() -> SignUpViewController? {
         return container.resolve(SignUpViewController.self)
+    }
+    
+    private func registerLoaderViewController() {
+        container.register(LoaderViewController.self) { _ in
+            return LoaderViewController()
+        }
+    }
+    
+    func makeLoaderViewController() -> LoaderViewController? {
+        return container.resolve(LoaderViewController.self)
     }
 }

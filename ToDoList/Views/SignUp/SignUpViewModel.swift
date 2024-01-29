@@ -47,8 +47,10 @@ class SignUpViewModelImplemenation: SignUpViewModel {
     }
     
     func requestSignUp() {
+        router.showLoaderView()
         auth.createUser(withEmail: email, password: password) { [weak self] response, error in
             if let error = error {
+                self?.router.dismissLoaderView()
                 print("Hubo un error: \(error.localizedDescription)")
             } else {
                 guard let response = response else { return }
@@ -60,6 +62,7 @@ class SignUpViewModelImplemenation: SignUpViewModel {
     private func doUserLogin(user: User) {
         auth.signIn(withEmail: user.email ?? .empty, password: password) { [weak self] _, error in
             if let error = error {
+                self?.router.dismissLoaderView()
                 print("Hubo un error: \(error.localizedDescription)")
             } else {
                 self?.saveUserInfo()
@@ -75,8 +78,10 @@ class SignUpViewModelImplemenation: SignUpViewModel {
                                                             "phone": phone,
                                                             "email": email]) { [weak self] error in
             if let error = error {
+                self?.router.dismissLoaderView()
                 print("Hubo un error: \(error.localizedDescription)")
             } else {
+                self?.router.dismissLoaderView()
                 self?.router.presentTaskList()
             }
         }

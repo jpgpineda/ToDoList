@@ -10,6 +10,7 @@ import Swinject
 protocol HomeDependency {
     var container: Container { get set }
     func makeListViewController() -> TaskListViewController?
+    func makeAddTaskViewController(task: TaskItem?) -> AddTaskViewController?
 }
 
 class HomeDependencyImplementation: HomeDependency {
@@ -18,6 +19,7 @@ class HomeDependencyImplementation: HomeDependency {
     init(container: Container) {
         self.container = container
         registerListViewController()
+        registerAddTaskViewController()
     }
     
     func registerListViewController() {
@@ -28,5 +30,17 @@ class HomeDependencyImplementation: HomeDependency {
     
     func makeListViewController() -> TaskListViewController? {
         container.resolve(TaskListViewController.self)
+    }
+    
+    private func registerAddTaskViewController() {
+        container.register(AddTaskViewController.self) { _ in
+            return AddTaskViewController()
+        }
+    }
+    
+    func makeAddTaskViewController(task: TaskItem?) -> AddTaskViewController? {
+        guard let viewController = container.resolve(AddTaskViewController.self) else { return nil }
+        viewController.task = task
+        return viewController
     }
 }

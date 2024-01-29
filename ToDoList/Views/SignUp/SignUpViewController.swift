@@ -13,6 +13,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var genreControl: UISegmentedControl!
     @IBOutlet weak var confirmTextField: UITextField!
@@ -24,6 +25,7 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = SignUpViewModelImplemenation(router: SignUpRouterImplementation(controller: self))
+        containerView.roundCorners([.topLeft, .topRight], radius: 16.0)
         nameTextField.delegate = self
         lastNameTextField.delegate = self
         userNameTextField.delegate = self

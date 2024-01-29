@@ -36,9 +36,22 @@
 		08950D122B61845D00F224B5 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08950D102B61845D00F224B5 /* SignInViewController.xib */; };
 		08950D172B61A67200F224B5 /* OnboardingDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08950D162B61A67200F224B5 /* OnboardingDependency.swift */; };
 		08950D202B62C08000F224B5 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08950D1F2B62C08000F224B5 /* SignInViewModel.swift */; };
+		08C131262B66CC5D00BD1858 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C131252B66CC5D00BD1858 /* TaskListViewModel.swift */; };
+		08C131282B66CCEF00BD1858 /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C131272B66CCEF00BD1858 /* TaskItem.swift */; };
+		08C1312A2B66CD2F00BD1858 /* TaskListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C131292B66CD2F00BD1858 /* TaskListRouter.swift */; };
+		08C1312E2B66CE5200BD1858 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C1312C2B66CE5200BD1858 /* AddTaskViewController.swift */; };
+		08C1312F2B66CE5200BD1858 /* AddTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08C1312D2B66CE5200BD1858 /* AddTaskViewController.xib */; };
+		08C131312B66D1C800BD1858 /* SignInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C131302B66D1C800BD1858 /* SignInRouter.swift */; };
+		08C131332B66D85100BD1858 /* AddTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C131322B66D85100BD1858 /* AddTaskViewModel.swift */; };
+		08C131352B66D89800BD1858 /* AddTaskRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C131342B66D89800BD1858 /* AddTaskRouter.swift */; };
+		08C131372B66DAEE00BD1858 /* UIVIew+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C131362B66DAEE00BD1858 /* UIVIew+Ext.swift */; };
 		08DE2B062B62C32C00B76D60 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE2B042B62C32C00B76D60 /* TaskListViewController.swift */; };
 		08DE2B072B62C32C00B76D60 /* TaskListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DE2B052B62C32C00B76D60 /* TaskListViewController.xib */; };
 		08DE2B092B62C47800B76D60 /* HomeDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DE2B082B62C47800B76D60 /* HomeDependency.swift */; };
+		08EF9A442B67FE0C00580AD9 /* ToDoListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EF9A432B67FE0C00580AD9 /* ToDoListButton.swift */; };
+		08EF9A462B68016400580AD9 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EF9A452B68016400580AD9 /* UIViewController+Ext.swift */; };
+		08EF9A4A2B6801BA00580AD9 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EF9A482B6801BA00580AD9 /* LoaderViewController.swift */; };
+		08EF9A4B2B6801BA00580AD9 /* LoaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08EF9A492B6801BA00580AD9 /* LoaderViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,9 +102,22 @@
 		08950D102B61845D00F224B5 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		08950D162B61A67200F224B5 /* OnboardingDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDependency.swift; sourceTree = "<group>"; };
 		08950D1F2B62C08000F224B5 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		08C131252B66CC5D00BD1858 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
+		08C131272B66CCEF00BD1858 /* TaskItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
+		08C131292B66CD2F00BD1858 /* TaskListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListRouter.swift; sourceTree = "<group>"; };
+		08C1312C2B66CE5200BD1858 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		08C1312D2B66CE5200BD1858 /* AddTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTaskViewController.xib; sourceTree = "<group>"; };
+		08C131302B66D1C800BD1858 /* SignInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRouter.swift; sourceTree = "<group>"; };
+		08C131322B66D85100BD1858 /* AddTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewModel.swift; sourceTree = "<group>"; };
+		08C131342B66D89800BD1858 /* AddTaskRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskRouter.swift; sourceTree = "<group>"; };
+		08C131362B66DAEE00BD1858 /* UIVIew+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Ext.swift"; sourceTree = "<group>"; };
 		08DE2B042B62C32C00B76D60 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		08DE2B052B62C32C00B76D60 /* TaskListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskListViewController.xib; sourceTree = "<group>"; };
 		08DE2B082B62C47800B76D60 /* HomeDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDependency.swift; sourceTree = "<group>"; };
+		08EF9A432B67FE0C00580AD9 /* ToDoListButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListButton.swift; sourceTree = "<group>"; };
+		08EF9A452B68016400580AD9 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		08EF9A482B6801BA00580AD9 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
+		08EF9A492B6801BA00580AD9 /* LoaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +151,8 @@
 		084F5D402B62CFAE00A1E76F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				08EF9A472B6801AE00580AD9 /* Components */,
+				08EF9A422B67FDF700580AD9 /* Button */,
 				084F5D412B62CFB500A1E76F /* Cells */,
 			);
 			path = UI;
@@ -220,6 +248,7 @@
 		0856405E2B6168470010E350 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				08C1312B2B66CE4500BD1858 /* AddTask */,
 				084F5D502B640D8100A1E76F /* Welcome */,
 				084F5D4B2B6407B500A1E76F /* SignUp */,
 				08DE2B032B62C2FD00B76D60 /* TaskList */,
@@ -234,6 +263,7 @@
 				08950D0F2B61845D00F224B5 /* SignInViewController.swift */,
 				08950D102B61845D00F224B5 /* SignInViewController.xib */,
 				08950D1F2B62C08000F224B5 /* SignInViewModel.swift */,
+				08C131302B66D1C800BD1858 /* SignInRouter.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -242,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				084F5D462B62D11C00A1E76F /* LocalUser.swift */,
+				08C131272B66CCEF00BD1858 /* TaskItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -277,6 +308,8 @@
 			isa = PBXGroup;
 			children = (
 				08950D0A2B617A5600F224B5 /* String+Ext.swift */,
+				08C131362B66DAEE00BD1858 /* UIVIew+Ext.swift */,
+				08EF9A452B68016400580AD9 /* UIViewController+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -296,13 +329,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		08C1312B2B66CE4500BD1858 /* AddTask */ = {
+			isa = PBXGroup;
+			children = (
+				08C1312C2B66CE5200BD1858 /* AddTaskViewController.swift */,
+				08C1312D2B66CE5200BD1858 /* AddTaskViewController.xib */,
+				08C131322B66D85100BD1858 /* AddTaskViewModel.swift */,
+				08C131342B66D89800BD1858 /* AddTaskRouter.swift */,
+			);
+			path = AddTask;
+			sourceTree = "<group>";
+		};
 		08DE2B032B62C2FD00B76D60 /* TaskList */ = {
 			isa = PBXGroup;
 			children = (
 				08DE2B042B62C32C00B76D60 /* TaskListViewController.swift */,
 				08DE2B052B62C32C00B76D60 /* TaskListViewController.xib */,
+				08C131252B66CC5D00BD1858 /* TaskListViewModel.swift */,
+				08C131292B66CD2F00BD1858 /* TaskListRouter.swift */,
 			);
 			path = TaskList;
+			sourceTree = "<group>";
+		};
+		08EF9A422B67FDF700580AD9 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				08EF9A432B67FE0C00580AD9 /* ToDoListButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		08EF9A472B6801AE00580AD9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				08EF9A482B6801BA00580AD9 /* LoaderViewController.swift */,
+				08EF9A492B6801BA00580AD9 /* LoaderViewController.xib */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,9 +482,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				08DE2B072B62C32C00B76D60 /* TaskListViewController.xib in Resources */,
+				08C1312F2B66CE5200BD1858 /* AddTaskViewController.xib in Resources */,
 				084F5D5A2B641F1700A1E76F /* GoogleService-Info.plist in Resources */,
 				08950D122B61845D00F224B5 /* SignInViewController.xib in Resources */,
 				0856403B2B6017150010E350 /* LaunchScreen.storyboard in Resources */,
+				08EF9A4B2B6801BA00580AD9 /* LoaderViewController.xib in Resources */,
 				085640382B6017150010E350 /* Assets.xcassets in Resources */,
 				085640362B6017140010E350 /* Main.storyboard in Resources */,
 				084F5D4F2B64082600A1E76F /* SignUpViewController.xib in Resources */,
@@ -450,20 +515,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08C131262B66CC5D00BD1858 /* TaskListViewModel.swift in Sources */,
+				08EF9A4A2B6801BA00580AD9 /* LoaderViewController.swift in Sources */,
+				08C131332B66D85100BD1858 /* AddTaskViewModel.swift in Sources */,
+				08EF9A462B68016400580AD9 /* UIViewController+Ext.swift in Sources */,
+				08C131372B66DAEE00BD1858 /* UIVIew+Ext.swift in Sources */,
 				084F5D582B6416E400A1E76F /* SignUpRouter.swift in Sources */,
 				084F5D442B62CFD800A1E76F /* TaskTableViewCell.swift in Sources */,
 				084F5D562B6416DD00A1E76F /* SignUpViewModel.swift in Sources */,
+				08EF9A442B67FE0C00580AD9 /* ToDoListButton.swift in Sources */,
 				084F5D522B640D9300A1E76F /* WelcomeViewModel.swift in Sources */,
 				08950D112B61845D00F224B5 /* SignInViewController.swift in Sources */,
+				08C131352B66D89800BD1858 /* AddTaskRouter.swift in Sources */,
 				08950D0B2B617A5600F224B5 /* String+Ext.swift in Sources */,
 				085640332B6017140010E350 /* WelcomeViewController.swift in Sources */,
 				08DE2B092B62C47800B76D60 /* HomeDependency.swift in Sources */,
 				0856406C2B6171860010E350 /* ModuleManager.swift in Sources */,
 				08DE2B062B62C32C00B76D60 /* TaskListViewController.swift in Sources */,
+				08C131282B66CCEF00BD1858 /* TaskItem.swift in Sources */,
 				084F5D472B62D11C00A1E76F /* LocalUser.swift in Sources */,
+				08C131312B66D1C800BD1858 /* SignInRouter.swift in Sources */,
+				08C1312A2B66CD2F00BD1858 /* TaskListRouter.swift in Sources */,
 				08950D0E2B617ABF00F224B5 /* Tools.swift in Sources */,
 				084F5D4E2B64082600A1E76F /* SignUpViewController.swift in Sources */,
 				084F5D542B640DF500A1E76F /* WelcomeRouter.swift in Sources */,
+				08C1312E2B66CE5200BD1858 /* AddTaskViewController.swift in Sources */,
 				0856402F2B6017140010E350 /* AppDelegate.swift in Sources */,
 				08950D202B62C08000F224B5 /* SignInViewModel.swift in Sources */,
 				085640312B6017140010E350 /* SceneDelegate.swift in Sources */,

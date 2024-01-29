@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddTaskViewController" customModule="ToDoList" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionTextView" destination="4l9-9Y-01Y" id="01R-0W-c5y"/>
+                <outlet property="dueDatePicker" destination="Wmr-rd-0nb" id="qEU-p0-zPE"/>
+                <outlet property="titleTextField" destination="L7S-VI-CwJ" id="7Jq-eH-aYR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agregar nueva tarea" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1A-Ll-i27">
+                    <rect key="frame" x="16" y="91" width="361" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Titulo de la tarea:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L7S-VI-CwJ">
+                    <rect key="frame" x="16" y="173" width="361" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yl-L9-nWe">
+                    <rect key="frame" x="15.999999999999996" y="144" width="47.666666666666657" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descripcion:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlE-bW-dPN">
+                    <rect key="frame" x="16" y="223" width="95.666666666666671" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4l9-9Y-01Y">
+                    <rect key="frame" x="16" y="252" width="361" height="128"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="oKT-wc-vHq"/>
+                    </constraints>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Wmr-rd-0nb">
+                    <rect key="frame" x="16" y="425" width="361" height="36"/>
+                    <connections>
+                        <action selector="dateSelected:" destination="-1" eventType="valueChanged" id="yuD-Q0-EzJ"/>
+                    </connections>
+                </datePicker>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7W-iR-fyr">
+                    <rect key="frame" x="16" y="493" width="361" height="40"/>
+                    <color key="backgroundColor" red="0.1215686275" green="0.32549019610000002" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="ARn-hM-srR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Agregar">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="addNewTask:" destination="-1" eventType="touchUpInside" id="7Pg-cW-oFQ"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14E-yc-XYZ">
+                    <rect key="frame" x="16" y="396" width="51" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="x1A-Ll-i27" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="32" id="24d-fI-eWB"/>
+                <constraint firstItem="14E-yc-XYZ" firstAttribute="top" secondItem="4l9-9Y-01Y" secondAttribute="bottom" constant="16" id="4KP-fd-TaI"/>
+                <constraint firstItem="Wmr-rd-0nb" firstAttribute="top" secondItem="14E-yc-XYZ" secondAttribute="bottom" constant="8" id="7LO-xh-q6f"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="U7W-iR-fyr" secondAttribute="trailing" constant="16" id="AHY-qx-Gg7"/>
+                <constraint firstAttribute="trailing" secondItem="Wmr-rd-0nb" secondAttribute="trailing" constant="16" id="ANv-cj-ijR"/>
+                <constraint firstItem="GlE-bW-dPN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="C93-P0-TZq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4l9-9Y-01Y" secondAttribute="trailing" constant="16" id="HnJ-j0-8qO"/>
+                <constraint firstItem="U7W-iR-fyr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="IvY-hX-x9h"/>
+                <constraint firstItem="14E-yc-XYZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="J6C-Tk-UGp"/>
+                <constraint firstItem="L7S-VI-CwJ" firstAttribute="top" secondItem="7yl-L9-nWe" secondAttribute="bottom" constant="8" id="M3B-AR-1UW"/>
+                <constraint firstItem="7yl-L9-nWe" firstAttribute="top" secondItem="x1A-Ll-i27" secondAttribute="bottom" constant="32" id="Nqg-54-U3W"/>
+                <constraint firstItem="U7W-iR-fyr" firstAttribute="top" secondItem="Wmr-rd-0nb" secondAttribute="bottom" constant="32" id="Rzm-ar-Mqz"/>
+                <constraint firstItem="7yl-L9-nWe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="SFy-Lu-SDF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="L7S-VI-CwJ" secondAttribute="trailing" constant="16" id="cXV-CJ-8rl"/>
+                <constraint firstItem="L7S-VI-CwJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="cmF-g8-Bcu"/>
+                <constraint firstItem="4l9-9Y-01Y" firstAttribute="top" secondItem="GlE-bW-dPN" secondAttribute="bottom" constant="8" id="gRM-FL-5wf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="x1A-Ll-i27" secondAttribute="trailing" constant="16" id="h4a-mj-xCF"/>
+                <constraint firstItem="Wmr-rd-0nb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="ifa-RX-L2N"/>
+                <constraint firstItem="4l9-9Y-01Y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="qmp-1w-t7H"/>
+                <constraint firstItem="GlE-bW-dPN" firstAttribute="top" secondItem="L7S-VI-CwJ" secondAttribute="bottom" constant="16" id="uPu-Tp-5uQ"/>
+                <constraint firstItem="x1A-Ll-i27" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="xNT-D7-jwx"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,33 +1,32 @@
 //
-//  SignUpRouter.swift
+//  SignInRouter.swift
 //  ToDoList
 //
-//  Created by javier pineda on 26/01/24.
+//  Created by javier pineda on 28/01/24.
 //
 
 import UIKit
 
-protocol SignUpRouter {
-    var controller: SignUpViewController { get set }
+protocol SignInRouter {
     func showLoaderView()
     func dismissLoaderView()
     func presentTaskList()
     func dismissView()
 }
 
-class SignUpRouterImplementation: SignUpRouter {
-    var controller: SignUpViewController
+class SignInRouterImplementation: SignInRouter {
+    private var controller: SignInViewController
     
-    init(controller: SignUpViewController) {
+    init(controller: SignInViewController) {
         self.controller = controller
     }
     
     func showLoaderView() {
-        controller.showLoader()
+        
     }
     
     func dismissLoaderView() {
-        controller.dismissLoader()
+        
     }
     
     func presentTaskList() {
