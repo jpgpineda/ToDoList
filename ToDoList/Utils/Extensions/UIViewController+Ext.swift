@@ -24,7 +24,7 @@ extension UIViewController {
     }
     
     func showErrorAlert(message: String) {
-        let alert = UIAlertController(title: "Ups!", message: message, preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "Ups!", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
@@ -35,7 +35,7 @@ extension UIViewController {
                           cancel: String?,
                           confirm: String,
                           confirmAction: @escaping() -> Void) {
-        let alert = UIAlertController(title: "Ups!", message: message, preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "Ups!", message: message, preferredStyle: .alert)
         if let cancel = cancel {
             alert.addAction(UIAlertAction(title: cancel, style: .destructive, handler: nil))
         }
@@ -45,5 +45,16 @@ extension UIViewController {
         }))
         
         present(alert, animated: true)
+    }
+    
+    func getDeleteActionConfiguration(deleteAction: @escaping() -> Void) -> UISwipeActionsConfiguration {
+        let delete = UIContextualAction(style: .destructive,
+                                        title: "Eliminar") { _, _, _ in
+            deleteAction()
+        }
+        delete.image = UIImage(systemName: "trash.fill")
+        let config = UISwipeActionsConfiguration(actions: [delete])
+        config.performsFirstActionWithFullSwipe = true
+        return config
     }
 }

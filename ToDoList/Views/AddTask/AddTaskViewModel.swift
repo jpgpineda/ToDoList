@@ -40,9 +40,12 @@ class AddTaskViewModelImplemenation: AddTaskViewModel {
     func addTask() {
         router.showLoaderView()
         guard let userId = auth.currentUser?.uid else { return }
-        db.collection("Usuarios").document(userId).collection("Tasks").document().setData(["Title" : title,
-                                                                                           "description": description,
-                                                                                           "dueDate": Timestamp(date: dueDate)]) { [weak self] error in
+        let docRef = db.collection("Usuarios").document(userId).collection("Tasks").document()
+        docRef.setData(["title" : title,
+                        "description": description,
+                        "dueDate": Timestamp(date: dueDate),
+                        "isCompleted": false,
+                        "id": docRef.documentID]) { [weak self] error in
             self?.router.dismissLoaderView()
             if let error = error {
                 self?.view.showFailureAlert(message: error.localizedDescription)

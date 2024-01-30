@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import RealmSwift
 
 class SignInViewController: UIViewController {
 
@@ -21,7 +22,12 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         containerView.roundCorners([.topLeft, .topRight], radius: 16.0)
-        viewModel = SignInViewModelImplemenation(router: SignInRouterImplementation(controller: self), view: self, auth: Auth.auth())
+        viewModel = SignInViewModelImplemenation(router: SignInRouterImplementation(controller: self),
+                                                 view: self,
+                                                 auth: Auth.auth(), 
+                                                 storageContext: StorageContextImplementation(realm: try? Realm()))
+        emailTextField.text = SharedPreferences.shared.getLastSignedUser()
+        view.hideKeyboardWhenTappedAround()
         emailTextField.delegate = self
         passwordTextField.delegate = self
     }

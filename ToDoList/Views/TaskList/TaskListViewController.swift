@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseAuth
+import RealmSwift
 
 class TaskListViewController: UIViewController {
 
@@ -17,14 +20,38 @@ class TaskListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: true)
-        viewModel = TaskListViewModelImplemenation(router: TaskListRouterImplementation(controller: self))
+        viewModel = TaskListViewModelImplemenation(router: TaskListRouterImplementation(controller: self),
+                                                   view: self,
+                                                   db: Firestore.firestore(),
+                                                   auth: Auth.auth(), 
+                                                   storageContext: StorageContextImplementation(realm: try? Realm()))
         taskTableView.register(UINib(nibName: TaskTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: TaskTableViewCell.identifier)
+        viewModel?.getTasks(false)
         taskTableView.dataSource = self
         taskTableView.delegate = self
     }
 
+    @IBAction func signOut(_ sender: UIBarButtonItem) {
+        viewModel?.signOut()
+    }
+    
     @IBAction func addNewTask(_ sender: UIBarButtonItem) {
         viewModel?.presentAddTask(task: nil)
+    }
+}
+
+extension TaskListViewController: TaskListView {
+    func showMessageAlert(message: String) {
+        showErrorAlert(message: message)
+    }
+    
+    func showFailureAlert(message: String) {
+        showErrorAlert(message: message)
+    }
+    
+    func updateContent(tasks: [TaskItem]) {
+        self.tasks = tasks
+        taskTableView.reloadData()
     }
 }
 
@@ -44,6 +71,16 @@ extension TaskListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let task = tasks[indexPath.row]
-        print(task)
+        viewModel?.updateTaskStatus(task: task, isCompleted: !task.isCompleted)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        return getDeleteActionConfiguration {
+            self.viewModel?.presentDeleteConfirmation(task: self.tasks[indexPath.row])
+        }
     }
 }

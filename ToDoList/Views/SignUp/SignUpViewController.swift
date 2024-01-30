@@ -25,6 +25,7 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = SignUpViewModelImplemenation(router: SignUpRouterImplementation(controller: self))
+        view.hideKeyboardWhenTappedAround()
         containerView.roundCorners([.topLeft, .topRight], radius: 16.0)
         nameTextField.delegate = self
         lastNameTextField.delegate = self

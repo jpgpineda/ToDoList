@@ -23,15 +23,18 @@ class SignInViewModelImplemenation: SignInViewModel {
     private var router: SignInRouter
     private var view: SignInView
     private var auth: Auth
+    private var storageContext: StorageContext?
     var email: String = .empty
     var password: String = .empty
     
     init(router: SignInRouter,
          view: SignInView,
-         auth: Auth) {
+         auth: Auth,
+         storageContext: StorageContext?) {
         self.router = router
         self.view = view
         self.auth = auth
+        self.storageContext = storageContext
     }
     
     func dismissView() {
@@ -45,8 +48,16 @@ class SignInViewModelImplemenation: SignInViewModel {
             if let error = error {
                 self?.view.showFailureAlert(message: error.localizedDescription)
             } else {
+                self?.manageNewUserSession(email: self?.email ?? .empty)
+                SharedPreferences.shared.saveLastSignedUser(email: self?.email ?? .empty)
                 self?.router.presentTaskList()
             }
+        }
+    }
+    
+    private func manageNewUserSession(email: String) {
+        if email != SharedPreferences.shared.getLastSignedUser() {
+            storageContext?.removeAll()
         }
     }
     

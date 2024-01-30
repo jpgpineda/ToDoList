@@ -25,6 +25,6 @@ class TaskTableViewCell: UITableViewCell {
         titleLabel.text = task.title
         descriptionLabel.text = task.description
         statusButton.setBackgroundImage(task.isCompleted ? UIImage(systemName: "circle.fill") : UIImage(systemName: "circle"), for: .normal)
+        dateLabel.text = CVDateFormatter.normalDate(task.dueDate)
     }
-
 }

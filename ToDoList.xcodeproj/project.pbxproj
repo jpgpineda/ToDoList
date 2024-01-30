@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		084F5D442B62CFD800A1E76F /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F5D422B62CFD800A1E76F /* TaskTableViewCell.swift */; };
 		084F5D452B62CFD800A1E76F /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 084F5D432B62CFD800A1E76F /* TaskTableViewCell.xib */; };
-		084F5D472B62D11C00A1E76F /* LocalUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F5D462B62D11C00A1E76F /* LocalUser.swift */; };
 		084F5D4A2B6348A400A1E76F /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 084F5D492B6348A400A1E76F /* Swinject */; };
 		084F5D4E2B64082600A1E76F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084F5D4C2B64082600A1E76F /* SignUpViewController.swift */; };
 		084F5D4F2B64082600A1E76F /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 084F5D4D2B64082600A1E76F /* SignUpViewController.xib */; };
@@ -52,6 +51,11 @@
 		08EF9A462B68016400580AD9 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EF9A452B68016400580AD9 /* UIViewController+Ext.swift */; };
 		08EF9A4A2B6801BA00580AD9 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EF9A482B6801BA00580AD9 /* LoaderViewController.swift */; };
 		08EF9A4B2B6801BA00580AD9 /* LoaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08EF9A492B6801BA00580AD9 /* LoaderViewController.xib */; };
+		08EF9A4F2B69542200580AD9 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 08EF9A4E2B69542200580AD9 /* Realm */; };
+		08EF9A512B69542200580AD9 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 08EF9A502B69542200580AD9 /* RealmSwift */; };
+		08EF9A542B69546700580AD9 /* StorageContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EF9A532B69546700580AD9 /* StorageContext.swift */; };
+		08EF9A572B6959A400580AD9 /* TaskItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EF9A562B6959A400580AD9 /* TaskItemModel.swift */; };
+		08EF9A5A2B6966B400580AD9 /* SharedPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EF9A592B6966B400580AD9 /* SharedPreferences.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +78,6 @@
 /* Begin PBXFileReference section */
 		084F5D422B62CFD800A1E76F /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		084F5D432B62CFD800A1E76F /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
-		084F5D462B62D11C00A1E76F /* LocalUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUser.swift; sourceTree = "<group>"; };
 		084F5D4C2B64082600A1E76F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		084F5D4D2B64082600A1E76F /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		084F5D512B640D9300A1E76F /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
@@ -118,6 +121,9 @@
 		08EF9A452B68016400580AD9 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		08EF9A482B6801BA00580AD9 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
 		08EF9A492B6801BA00580AD9 /* LoaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderViewController.xib; sourceTree = "<group>"; };
+		08EF9A532B69546700580AD9 /* StorageContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageContext.swift; sourceTree = "<group>"; };
+		08EF9A562B6959A400580AD9 /* TaskItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemModel.swift; sourceTree = "<group>"; };
+		08EF9A592B6966B400580AD9 /* SharedPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedPreferences.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,8 @@
 			files = (
 				084F5D4A2B6348A400A1E76F /* Swinject in Frameworks */,
 				084F5D5D2B641FB200A1E76F /* FirebaseAuth in Frameworks */,
+				08EF9A4F2B69542200580AD9 /* Realm in Frameworks */,
+				08EF9A512B69542200580AD9 /* RealmSwift in Frameworks */,
 				084F5D5F2B641FB200A1E76F /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,7 +279,7 @@
 		085640662B6171410010E350 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				084F5D462B62D11C00A1E76F /* LocalUser.swift */,
+				08EF9A552B69598A00580AD9 /* Entities */,
 				08C131272B66CCEF00BD1858 /* TaskItem.swift */,
 			);
 			path = Model;
@@ -280,6 +288,8 @@
 		085640672B61714D0010E350 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				08EF9A582B6966A600580AD9 /* UserDefaults */,
+				08EF9A522B69545800580AD9 /* StorageContext */,
 				085640692B6171650010E350 /* DependencyManager */,
 			);
 			path = Core;
@@ -368,6 +378,30 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		08EF9A522B69545800580AD9 /* StorageContext */ = {
+			isa = PBXGroup;
+			children = (
+				08EF9A532B69546700580AD9 /* StorageContext.swift */,
+			);
+			path = StorageContext;
+			sourceTree = "<group>";
+		};
+		08EF9A552B69598A00580AD9 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				08EF9A562B6959A400580AD9 /* TaskItemModel.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		08EF9A582B6966A600580AD9 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				08EF9A592B6966B400580AD9 /* SharedPreferences.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -388,6 +422,8 @@
 				084F5D492B6348A400A1E76F /* Swinject */,
 				084F5D5C2B641FB200A1E76F /* FirebaseAuth */,
 				084F5D5E2B641FB200A1E76F /* FirebaseFirestore */,
+				08EF9A4E2B69542200580AD9 /* Realm */,
+				08EF9A502B69542200580AD9 /* RealmSwift */,
 			);
 			productName = ToDoList;
 			productReference = 0856402B2B6017140010E350 /* ToDoList.app */;
@@ -464,6 +500,7 @@
 			packageReferences = (
 				084F5D482B63489200A1E76F /* XCRemoteSwiftPackageReference "Swinject" */,
 				084F5D5B2B641FB200A1E76F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				08EF9A4D2B69542200580AD9 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 0856402C2B6017140010E350 /* Products */;
 			projectDirPath = "";
@@ -520,10 +557,12 @@
 				08C131332B66D85100BD1858 /* AddTaskViewModel.swift in Sources */,
 				08EF9A462B68016400580AD9 /* UIViewController+Ext.swift in Sources */,
 				08C131372B66DAEE00BD1858 /* UIVIew+Ext.swift in Sources */,
+				08EF9A5A2B6966B400580AD9 /* SharedPreferences.swift in Sources */,
 				084F5D582B6416E400A1E76F /* SignUpRouter.swift in Sources */,
 				084F5D442B62CFD800A1E76F /* TaskTableViewCell.swift in Sources */,
 				084F5D562B6416DD00A1E76F /* SignUpViewModel.swift in Sources */,
 				08EF9A442B67FE0C00580AD9 /* ToDoListButton.swift in Sources */,
+				08EF9A572B6959A400580AD9 /* TaskItemModel.swift in Sources */,
 				084F5D522B640D9300A1E76F /* WelcomeViewModel.swift in Sources */,
 				08950D112B61845D00F224B5 /* SignInViewController.swift in Sources */,
 				08C131352B66D89800BD1858 /* AddTaskRouter.swift in Sources */,
@@ -532,8 +571,8 @@
 				08DE2B092B62C47800B76D60 /* HomeDependency.swift in Sources */,
 				0856406C2B6171860010E350 /* ModuleManager.swift in Sources */,
 				08DE2B062B62C32C00B76D60 /* TaskListViewController.swift in Sources */,
+				08EF9A542B69546700580AD9 /* StorageContext.swift in Sources */,
 				08C131282B66CCEF00BD1858 /* TaskItem.swift in Sources */,
-				084F5D472B62D11C00A1E76F /* LocalUser.swift in Sources */,
 				08C131312B66D1C800BD1858 /* SignInRouter.swift in Sources */,
 				08C1312A2B66CD2F00BD1858 /* TaskListRouter.swift in Sources */,
 				08950D0E2B617ABF00F224B5 /* Tools.swift in Sources */,
@@ -908,6 +947,14 @@
 				minimumVersion = 10.20.0;
 			};
 		};
+		08EF9A4D2B69542200580AD9 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.46.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -925,6 +972,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 084F5D5B2B641FB200A1E76F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		08EF9A4E2B69542200580AD9 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08EF9A4D2B69542200580AD9 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		08EF9A502B69542200580AD9 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08EF9A4D2B69542200580AD9 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

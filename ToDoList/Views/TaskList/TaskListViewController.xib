@@ -31,6 +31,9 @@
                         <navigationItem title="Tareas" id="vND-Z2-xPO">
                             <barButtonItem key="leftBarButtonItem" image="arrow.left.to.line.alt" catalog="system" id="Yta-Xs-IC4">
                                 <color key="tintColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="signOut:" destination="-1" id="l1N-qj-VXO"/>
+                                </connections>
                             </barButtonItem>
                             <rightBarButtonItems>
                                 <barButtonItem image="plus" catalog="system" style="plain" id="yVV-a2-k3k">

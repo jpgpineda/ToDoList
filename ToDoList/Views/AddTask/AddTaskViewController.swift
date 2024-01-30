@@ -9,7 +9,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 
-typealias updateTable = (Bool) -> Void
+typealias UpdateTable = (Bool) -> Void
 
 class AddTaskViewController: UIViewController {
     
@@ -18,11 +18,12 @@ class AddTaskViewController: UIViewController {
     @IBOutlet weak var dueDatePicker: UIDatePicker!
     var task: TaskItem?
     var viewModel: AddTaskViewModel?
-    var closure: updateTable!
+    var closure: UpdateTable!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = AddTaskViewModelImplemenation(router: AddTaskRouterImplementation(controller: self), view: self, db: Firestore.firestore(), auth: Auth.auth())
+        view.hideKeyboardWhenTappedAround()
         titleTextField.delegate = self
         descriptionTextView.delegate = self
     }
